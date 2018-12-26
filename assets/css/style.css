@@ -20,7 +20,7 @@ body{font-family: 'Lantinghei SC','microsoft yahei', Tahoma, Helvetica, SimSun, 
 /*框架头部内容*/
 .tobar-head { width: 180px; }
 .tobar-head .topbar-logo { display: block; padding: 15px; width: 50px; height: 50px; background: #097ac8; }
-.topbar-console .topbar-home-link { width: 130px; border-right: 1px solid #008fbf; }
+.topbar-console .topbar-home-link { padding: 6px 10px; }
 .topbar-info { position: absolute; right: 0; top: 0; background: #008fbf; }
 .topbar-info .topbar-notice { position: relative; margin-left: 1px; padding: 0 20px; }
 .topbar-info .topbar-notice .icon-notice { float: left; margin: 17px 5px 17px 0; }

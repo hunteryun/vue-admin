@@ -28,19 +28,6 @@
 					<!--have表示有消息，没有消息去掉have-->
 					</a>
 					</li>
-					<!-- 					<li class="fl topbar-info-item strong">
-					<div class="dropdown">
-						<a href="#" class="dropdown-toggle topbar-btn">
-						<span class="fl">工单服务</span>
-						<span class="icon-arrow-down"></span>
-						</a>
-						<ul class="dropdown-menu">
-							<li><a href="#">我的工单</a></li>
-							<li><a href="#">提交工单</a></li>
-						</ul>
-					</div>
-					</li>
-					 -->
 					<li class="fl topbar-info-item">
 					<div class="dropdown">
 						<a href="#" class="topbar-btn">
@@ -74,74 +61,60 @@
 						<div class="sidebar-title">
 							<a href="#">
 								<span class="icon"><b class="fl icon-arrow-down"></b></span>
-								<span class="text-normal">产品与服务</span>
+								<span class="text-normal">管理</span>
 							</a>
 						</div>
 						<ul class="sidebar-trans">
-							<li>
-								<a href="webSet.html">
-									<b class="sidebar-icon"><img src="/theme/vue-admin/assets/images/icon_author.png" width="16" height="16" /></b>
-									<span class="text-normal">站点管理</span>
-								</a>
-							</li>
-							<li>
-								<a href="smsInfo.html">
-									<b class="sidebar-icon"><img src="/theme/vue-admin/assets/images/icon_message.png" width="16" height="16" /></b>
-									<span class="text-normal">短信</span>
-								</a>
-							</li>
-							<!-- <li>
-								<a href="#">
-									<b class="sidebar-icon"><img src="/theme/vue-admin/assets/images/icon_market.png" width="16" height="16" /></b>
-									<span class="text-normal">云市场</span>
-								</a>
-							</li> -->
-						</ul>
-					</div>
-					<div class="sidebar-nav">
-						<div class="sidebar-title">
-							<a href="#">
-								<span class="icon"><b class="fl icon-arrow-down"></b></span>
-								<span class="text-normal">用户中心</span>
-							</a>
-						</div>
-						<ul class="sidebar-trans">
-							<li>
-								<a href="userInfo.html">
-									<b class="sidebar-icon"><img src="/theme/vue-admin/assets/images/icon_cost.png" width="16" height="16" /></b>
-									<span class="text-normal">账号管理</span>
-								</a>
-							</li>
-							<li>
-								<a href="identify.html">
-									<b class="sidebar-icon"><img src="/theme/vue-admin/assets/images/icon_authentication.png" width="16" height="16" /></b>
-									<span class="text-normal">实名认证</span>
-								</a>
-							</li>
-							<li>
-								<a href="message.html">
-									<b class="sidebar-icon"><img src="/theme/vue-admin/assets/images/icon_news.png" width="16" height="16" /></b>
-									<span class="text-normal">消息中心</span>
-								</a>
-							</li>
-							<li>
-								<a href="money.html">
-									<b class="sidebar-icon"><img src="/theme/vue-admin/assets/images/icon_gold.png" width="16" height="16" /></b>
-									<span class="text-normal">金币管理</span>
-								</a>
-							</li>
-							<li>
-								<a href="order.html">
-									<b class="sidebar-icon"><img src="/theme/vue-admin/assets/images/icon_order.png" width="16" height="16" /></b>
-									<span class="text-normal">订单管理</span>
-								</a>
-							</li>
+              <li>
+                <a href="admin/category/list">
+                  <b class="el-icon-star-off"></b>
+                  <span class="text-normal">分类管理</span>
+                </a>
+              </li>
+              <li>
+                <a href="admin/page/list">
+                  <b class="el-icon-tickets"></b>
+                  <span class="text-normal">单页管理</span>
+                </a>
+              </li>
+              <li>
+                  <a href="admin/news/list">
+                    <b class="el-icon-edit-outline"></b>
+                    <span class="text-normal">新闻管理</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="admin/views">
+                    <b class="el-icon-date"></b>
+                    <span class="text-normal">视图管理</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="admin/user/list">
+                    <b class="el-icon-message"></b>
+                    <span class="text-normal">用户管理</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="admin/role/list">
+                    <b class="el-icon-time"></b>
+                    <span class="text-normal">角色管理</span>
+                  </a>
+              </li>
+                <li>
+                  <a href="admin/site-config">
+                    <b class="el-icon-menu"></b>
+                    <span class="text-normal">网站设置</span>
+                  </a>
+              </li>
 						</ul>
 					</div>
 				</div>
 			</div>
-			<div class="view-product background-color">
-        @yield('main-content')
+			<div class="view-product">
+        <div class="main-content text-box-main">
+          @yield('main-content')
+        </div>
 			</div>
 		</div>
   </div>
@@ -149,33 +122,7 @@
   <script src="/theme/vue-admin/assets/js/vue.js"></script>
   <script src="/theme/vue-admin/assets/js/element.js"></script>
   <script src="/theme/vue-admin/assets/js/jquery-1.7.2.min.js"></script>
-  <script>
-   new Vue({
-       el: "#app",
-       data: {
-           ruleForm : {
-             username : "",
-             password : ""
-           },
-           rules : {
-             username : [
-                { required: true, message: '请输入用户名', trigger: 'blur' }
-             ]
-           }
-       },
-       mounted: function () {
-
-       },
-       methods: {
-         submitForm : function(formName){
-           var vm = this;
-         },
-         resetForm : function(formName){
-           this.$refs[formName].resetFields();
-         }
-       }
-   });
-  </script>
+  @yield('footer-js')
 	</body>
 
 </html>

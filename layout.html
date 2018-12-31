@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <title>管理后台</title>
   <base href="{{ base_path() }}">
-  <link rel="stylesheet" href="/theme/vue-admin/assets/css/element.css">
-  <link rel="stylesheet" type="text/css" href="/theme/vue-admin/assets/css/identify.css" />
-  <link rel="stylesheet" type="text/css" href="/theme/vue-admin/assets/css/layout.css" />
-  <link rel="stylesheet" type="text/css" href="/theme/vue-admin/assets/css/account.css" />
-  <link rel="stylesheet" type="text/css" href="/theme/vue-admin/assets/css/style.css" />
-  <link rel="stylesheet" type="text/css" href="/theme/vue-admin/assets/css/control_index.css" />
+  <link rel="stylesheet" href="/theme/admin/assets/css/element.css">
+  <link rel="stylesheet" type="text/css" href="/theme/admin/assets/css/identify.css" />
+  <link rel="stylesheet" type="text/css" href="/theme/admin/assets/css/layout.css" />
+  <link rel="stylesheet" type="text/css" href="/theme/admin/assets/css/account.css" />
+  <link rel="stylesheet" type="text/css" href="/theme/admin/assets/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/theme/admin/assets/css/control_index.css" />
  </head>
  <body>
    <div id="app">
 		<div class="view-topbar">
 			<div class="topbar-console">
 				<div class="tobar-head fl">
-					<a href="index.html" class="topbar-home-link text-center fl"><img src="/theme/vue-admin/assets/logo.png"></a>
+					<a href="index.html" class="topbar-home-link text-center fl"><img src="/theme/admin/assets/logo.png"></a>
 				</div>
 			</div>
 			<div class="topbar-info">
@@ -112,16 +112,18 @@
 				</div>
 			</div>
 			<div class="view-product">
-        <div class="main-content text-box-main">
-          @yield('main-content')
+        <div class="padding-big background-color">
+          <div class="main-content text-box-main">
+            @yield('main-content')
+          </div>
         </div>
 			</div>
 		</div>
   </div>
 
-  <script src="/theme/vue-admin/assets/js/vue.js"></script>
-  <script src="/theme/vue-admin/assets/js/element.js"></script>
-  <script src="/theme/vue-admin/assets/js/jquery-1.7.2.min.js"></script>
+  <script src="/theme/admin/assets/js/vue.js"></script>
+  <script src="/theme/admin/assets/js/element.js"></script>
+  <script src="/theme/admin/assets/js/jquery-1.7.2.min.js"></script>
   @yield('footer-js')
 	</body>
 

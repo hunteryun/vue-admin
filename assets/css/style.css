@@ -9,7 +9,7 @@ body{font-family: 'Lantinghei SC','microsoft yahei', Tahoma, Helvetica, SimSun, 
 .blue {color: #1E9FFF;}
 
 /*框架*/
-.view-topbar {position: relative; position: fixed;  width: 100%; min-width: 640px; height: 50px; background: #2a94de; z-index: 101; }
+.view-topbar {position: relative; position: fixed;  width: 100%; min-width: 640px; height: 50px; background: #293038; z-index: 101; }
 .view-body { position: absolute; width: 100%; min-width: 1200px; top: 50px; bottom: 0px; background-color: #000; }
 .view-body .view-sidebar { position: fixed; top: 50px; bottom: 0px; background-color: #293038; z-index: 102; }
 .view-product { width: auto; position: absolute; top: 0px; left: 180px; bottom: 0px; right: 0px;overflow: auto; background: #FFF; }
@@ -25,20 +25,18 @@ body{font-family: 'Lantinghei SC','microsoft yahei', Tahoma, Helvetica, SimSun, 
 .tobar-head { width: 180px; }
 .tobar-head .topbar-logo { display: block; padding: 15px; width: 50px; height: 50px; background: #097ac8; }
 .topbar-console .topbar-home-link { padding: 6px 10px; }
-.topbar-info { position: absolute; right: 0; top: 0; background: #008fbf; }
+.topbar-info { position: absolute; right: 0; top: 0;}
 .topbar-info .topbar-notice { position: relative; margin-left: 1px; padding: 0 20px; }
 .topbar-info .topbar-notice .icon-notice { float: left; margin: 17px 5px 17px 0; }
 .topbar-info .topbar-notice .topbar-num { font-size: 12px; color: #00ace9; background: #0087b4; border-radius: 5px; padding: 2px 5px; display: inline-block; margin-top: 15px; line-height: 16px; vertical-align: top; text-align: center; }
 .topbar-info .topbar-notice .topbar-num.have { color: #fff; background: #f90; }
 .topbar-info .topbar-info-item { margin-left: 1px; }
-.view-topbar .topbar-info .topbar-btn { padding: 0 10px; height: 50px; display: block; z-index: 2; background: #2a94de; }
-.topbar-info .topbar-btn:hover,.topbar-info .topbar-btn.topbar-btn-dark { background: #1380cb; }
+.view-topbar .topbar-info .topbar-btn { padding: 0 10px; height: 50px; display: block; z-index: 2; background: #293038; }
 .topbar-info .dropdown-menu { width: 100%; z-index: 1; }
 .topbar-info .icon-arrow-down { float: right; margin: 17px 0 17px 5px; }
 .topbar-info .dropdown-menu { width: 100%; min-width: 0px; margin-top: -1px; }
 .topbar-info .dropdown-menu li { border-bottom: 1px solid #eaedf1; }
 .topbar-info .dropdown-menu a { display: block; padding-left: 10px; color: #333; line-height: 40px; }
-.topbar-info .dropdown-menu a:hover { color: #262626; background-color: #f5f5f5; }
 .topbar-info .dropdown.open .topbar-btn { color: #333; background: #fff; border-bottom: 1px solid #eaedf1; position: relative; }
 .topbar-info .dropdown.open .dropdown-menu { display: block; }
 .topbar-info .dropdown.open .icon-arrow-down { background-position: 0 -26px; }

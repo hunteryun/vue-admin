@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <title>管理中心登录</title>
   <base href="{{ base_path() }}">
-  <link rel="stylesheet" href="/theme/vue-admin/assets/css/element.css">
-  <link rel="stylesheet" href="/theme/vue-admin/assets/css/login.css">
+  <link rel="stylesheet" href="/theme/admin/assets/css/element.css">
+  <link rel="stylesheet" href="/theme/admin/assets/css/login.css">
  </head>
  <body>
    <div id="app">
@@ -14,27 +14,31 @@
        <h3>欢迎来到猎人管理中心</h3>
        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" :hide-required-asterisk="true" class="demo-ruleForm">
          <el-form-item prop="username">
-           <el-input type="text" v-model="ruleForm.username" placeholder="账号" autocomplete="off"></el-input>
+           <el-input type="text" v-model="ruleForm.username" autocomplete="off">
+             <template slot="prepend">账号</template>
+           </el-input>
          </el-form-item>
          <el-form-item prop="password">
-           <el-input type="password" v-model="ruleForm.password" placeholder="密码" autocomplete="off"></el-input>
+           <el-input type="password" v-model="ruleForm.password" autocomplete="off">
+             <template slot="prepend">密码</template>
+           </el-input>
          </el-form-item>
          <el-form-item prop="_captcha" class="form-captcha">
-           <el-input type="text" v-model="ruleForm._captcha" placeholder="验证码" autocomplete="off">
+           <el-input type="text" v-model="ruleForm._captcha" autocomplete="off">
+             <template slot="prepend">验证码</template>
              <template slot="append">{!! captcha_img() !!}</template>
            </el-input>
          </el-form-item>
          <el-form-item>
-           <el-button type="primary" @click="submitForm('ruleForm')">立即登录</el-button>
-           <el-button @click="resetForm('ruleForm')">重置</el-button>
+           <el-button type="primary" @click="submitForm('ruleForm')" width="100%">立即登录</el-button>
          </el-form-item>
          {!! csrf_field() !!}
        </el-form>
      </div>
    </div>
-  <script src="/theme/vue-admin/assets/js/vue.js"></script>
-  <script src="/theme/vue-admin/assets/js/element.js"></script>
-  <script src="/theme/vue-admin/assets/js/jquery-1.7.2.min.js"></script>
+  <script src="/theme/admin/assets/js/vue.js"></script>
+  <script src="/theme/admin/assets/js/element.js"></script>
+  <script src="/theme/admin/assets/js/jquery-1.7.2.min.js"></script>
   <script>
    new Vue({
        el: "#app",
@@ -82,6 +86,7 @@
                         vm.$notify({
                           title: '提示',
                           message: res.msg,
+                          duration: 1000,
                           type: 'success',
                           onClose: function() {
                             window.location.href = "/admin/index";

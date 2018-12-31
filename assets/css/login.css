@@ -44,7 +44,10 @@
 .home-login .captcha-input {
   width: 136px;
 }
-.home-login .layui-btn {
+.home-login .el-input-group__prepend {
+  width: 40px;
+}
+.home-login .el-button--primary {
   width: 100%;
 }
 .form-captcha img {
